@@ -1,0 +1,84 @@
+.selected-question{
+    color : red;
+    border : 2px solid blue;
+}
+
+#kb_selected {
+    background-color: green;
+}
+
+/* Add this css so we can see when the action (orange) keys are highlighted */
+.ui-keyboard-button.ui-state-active.ui-state-hover {
+    border: 1px solid #fff;
+    -moz-box-shadow: 1px 1em 1px #ffba2b inset;
+    -webkit-box-shadow: 1px 1em 1px #ffba2b inset;
+    box-shadow: 1px 1em 1px #ffba2b inset;
+}
+/* Class added to indicate the virtual keyboard has navigation focus */
+.hasFocus { border-color: #59b4d4; }
+.kb_hover { }
+
+body { font-size: 14px; }
+
+h2 { font-size: 20px; }
+form input {
+    font-size: 1.2em;
+    height: auto;
+    padding: 0.5em;
+}
+form label {
+    display: block;
+    font-size: 14px;
+    padding: 10px 0 0 0;
+}
+.fieldset-grouping {
+    clear: both;
+}
+
+.ui-keyboard-nav button {}
+
+/* position keyboard at bottom of the screen - jQuery UI isn't even loaded! */
+.ui-keyboard {
+    -moz-box-shadow: 0 -15px 15px #FFFFFF;
+    -webkit-box-shadow: 0 -15px 15px #FFFFFF;
+    -ms-box-shadow: 0 -15px 15px #FFFFFF;
+    -o-box-shadow: 0 -15px 15px #FFFFFF;
+    box-shadow: 0 -15px 15px #FFFFFF;
+    -moz-border-radius: 0 0 0 0 !important;
+    -webkit-border-radius: 0 0 0 0 !important;
+    -ms-border-radius: 0 0 0 0 !important;
+    -o-border-radius: 0 0 0 0 !important;
+    border-radius: 0 0 0 0 !important;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif !important;
+    left: 0px !important;
+    top: auto !important;
+    bottom: 0px;
+    position: fixed !important;
+    width: 100%;
+}
+/*.ui-keyboard button {*/
+    /*padding: 0.257em 0.65em 0.397em !important;*/
+    /*width: auto !important;*/
+/*}*/
+/*.ui-keyboard button.ui-keyboard-space {width: 15em !important;}*/
+/*.ui-widget select, .ui-widget textarea, .ui-widget button {*/
+    /*font-family: 'Helvetica Neue', Helvetica, sans-serif !important;*/
+    /*font-size: 0.9em !important;*/
+/*}*/
+/*.ui-widget input {*/
+    /*font-family: 'Helvetica Neue', Helvetica, sans-serif !important;*/
+    /*font-size: 1.75em !important;*/
+    /*padding: 0.5em !important;*/
+/*}*/
+/*input.ui-keyboard-input {*/
+    /*background: #ffffff !important;*/
+/*}*/
+
+/*input.current {*/
+    /*border: 1px solid #1581EF !important;*/
+    /*box-shadow: 0 0 25px rgba(0, 0, 0, 0.3), 0 0 4px rgba(21, 129, 239, 0.5) inset !important;*/
+/*}*/
+
+/*.submit-grouping {*/
+    /*margin-top: 30px;*/
+/*}*/
