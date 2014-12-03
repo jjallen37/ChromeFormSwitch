@@ -1,10 +1,9 @@
-Virtual Keyboard for Google Chrome&trade;
+Switch Access for Google Forms
 =========================================
+The point of this chrome extension is to provide two-switch access
+to Google Forms. To install this extension, download this repository
+on to your computer. Then, go to "chrome://extensions/". Finally,
+click the "Load Unpacked Extension" button and select the repository folder.
 
-Virtual Keyboard for Google Chrome&trade; will popup automatically when the user clicks on an input field such as textboxes and textareas. Futhermore, the keyboard will disappear automatically once no longer needed.
-
-This extension is ideal for touch screen devices. This keyboard works like an iOS/Android/Windows 8 touch virtual keyboard.
-
-<img src="http://apps.xontab.com/apps/Content/VirtualKeyboard/1.png" alt="" />
-
-For more details visit: http://apps.xontab.com/VirtualKeyboard
+To try a demo of the extension, practice filling out the a sample form
+at the following link: https://docs.google.com/a/cs.unc.edu/forms/d/1e6aFoa8h_TYh2vDio1v3PWnCh0nWQP89DRKANdTmgnE/viewform?fbzx=-795725447638260055
