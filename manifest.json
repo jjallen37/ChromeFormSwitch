@@ -11,6 +11,7 @@
     ],
     "js": [
       "js/jquery.js",
+      "js/jquery.spotlight.js",
       "js/jquery.scrollTo.min.js",
       "js/KB_Node.js",
       "js/inject.js"
@@ -24,6 +25,7 @@
   "version": "1.0.0",
   "web_accessible_resources": [
     "js/jquery.js",
+    "js/jquery.spotlight.js",
     "js/jquery.scrollTo.min.js",
     "js/KB_Node.js",
     "js/inject.js",

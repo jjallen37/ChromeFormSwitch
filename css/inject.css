@@ -11,7 +11,7 @@
     background:#999;
     z-index:999999;
     border: 2px solid black;
-    opacity:0.5;
+    opacity:1;
 }
 
 #menu-container iframe{

@@ -10,8 +10,10 @@
  */
 
 var NODE_CLASS = 'kb-content-box-blue';
-//var SELECTED_CLASS = 'kb-content-box-green';
-var SELECTED_CLASS = 'switch-navigation-usable';
+var SELECTED_CLASS = 'kb-content-box-green';
+//var NODE_CLASS = '';
+//var SELECTED_CLASS = '';
+//var SELECTED_CLASS = 'switch-navigation-usable';
 var NUM_LIVES = 1;
 
 var KB_Node = function(parent, elt){
@@ -79,6 +81,7 @@ KB_Node.prototype.scanNode = function(){
  */
 KB_Node.prototype.decorateNode = function(toggle){
     $(this.elt).toggleClass(NODE_CLASS, toggle);
+    //$(this.elt).spotlight();
     if (this.children.length == 0){return;}
 
     var selectedNode = this.getSelectedNode();

@@ -42,21 +42,24 @@ var Inject = (function (){
 		_node.decorateNode(true);
 
 		// Create overlay
-		_overlay = $('<div />',{id:'switch-navigation-overlay'});
-		_overlay.prependTo($('#switch-navigation-wrapper'));
+		//_overlay = $('<div />',{id:'switch-navigation-overlay'});
+		//_overlay.prependTo($('#switch-navigation-wrapper'));
 
 		// create the main container
 		_container = $('<div />', {id:ID.CONTAINER});
 		_container.appendTo(document.body);
 
-
+		//$('input').click(function(e){
+		//	console.log("this:"+this);
+		//	$(this).spotlight();
+		//});
 
 		// add the "menu" iframe
 		getView('menu', _container);
 
 		// listen to the iframes/webpages message
 		window.addEventListener("message", dom_onMessage, false);
-	
+
 		// listen to the Control Center (background.js) messages
 		chrome.extension.onMessage.addListener(background_onMessage);
 
