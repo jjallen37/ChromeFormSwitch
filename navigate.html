@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Virtual Keyboard Navigation Demo</title>
+
+	<!-- jQuery & jQuery UI + theme (required) -->
+	<link href="http://code.jquery.com/ui/1.9.0/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.min.js"></script>
+
+	<!-- keyboard widget css & script (required) -->
+	<link rel="stylesheet" href="css/keyboard.css">
+	<script src="js/jquery.keyboard.js"></script>
+
+	<!-- keyboard extensions (optional) -->
+	<!-- <script src="js/jquery.keyboard.extension-typing.js"></script> -->
+	<!-- <script src="js/jquery.keyboard.extension-autocomplete.js"></script> -->
+	<script src="js/jquery.keyboard.extension-switch-navigation.js"></script>
+
+	<style>
+	/* Add this css so we can see when the action (orange) keys are highlighted */
+	.ui-keyboard-button.ui-state-active.ui-state-hover {
+		border: 1px solid #fff;
+		-moz-box-shadow: 1px 1em 1px #ffba2b inset;
+		-webkit-box-shadow: 1px 1em 1px #ffba2b inset;
+		box-shadow: 1px 1em 1px #ffba2b inset;
+	}
+	#wrap{
+		text-align: center;
+	}
+	/* Class added to indicate the virtual keyboard has navigation focus */
+	.hasFocus { border-color: #59b4d4; }
+
+
+	</style>
+
+	<!-- initialize keyboard (required) -->
+	<script>
+	$(function(){
+
+		$('#keyboard')
+			.keyboard({
+				alwaysOpen: true
+			}).addSwitchNavigation({
+					position   : [0,-1],     // set start position [row-number, key-index]
+					toggleMode : true,     // true = navigate the virtual keyboard, false = navigate in input/textarea
+					focusClass : 'hasFocus' // css class added when toggle mode is on
+            });
+
+		$('#selectBtn').on('click',function (e){
+			$('#keyboard').trigger('select');
+		});
+		$('#scanBtn').on('click',function (e){
+			$('#keyboard').trigger('scan');
+		});
+	});
+	</script>
+
+</head>
+
+<body>
+	<div id="wrap"> <!-- wrapper only needed to center the input -->
+		<button id="selectBtn">Select (Left)</button>
+		<button id="scanBtn">Scan (Right)</button>
+		<br>
+		<br>
+		<!-- keyboard input -->
+		<label for="keyboard"></label>
+		<input type="text" name="keyboard" id="keyboard">
+
+	</div> <!-- End wrapper -->
+
+</body>
+
+</html>

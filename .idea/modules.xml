@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ChromeFormSwitch.iml" filepath="$PROJECT_DIR$/.idea/ChromeFormSwitch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Switch-Navigation.iml" filepath="$PROJECT_DIR$/.idea/Switch-Navigation.iml" />
     </modules>
   </component>
 </project>

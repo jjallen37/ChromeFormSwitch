@@ -1,0 +1,66 @@
+/* Add this css so we can see when the action (orange) keys are highlighted */
+.ui-keyboard-button.ui-state-active.ui-state-hover {
+    border: 1px solid #fff;
+    -moz-box-shadow: 1px 1em 1px #ffba2b inset;
+    -webkit-box-shadow: 1px 1em 1px #ffba2b inset;
+    box-shadow: 1px 1em 1px #ffba2b inset;
+}
+/* Class added to indicate the virtual keyboard has navigation focus */
+
+.hasFocus { border-color: #59b4d4; }
+.kb_hover { }
+/* Content Boxes
+from http://www.studiopress.com/design/colored-content-boxes-buttons.htm
+------------------------------------------------------------ */
+
+.kb-content-box-blue,
+.kb-content-box-gray,
+.kb-content-box-green,
+.kb-content-box-purple,
+.kb-content-box-red,
+.kb-content-box-yellow {
+    /*margin: 0 0 0px;*/
+    overflow: hidden;
+    /*padding: 0px;*/
+}
+
+.kb-content-box-blue {
+    background-color: #d8ecf7 !important;
+    border: 1px solid #afcde3 !important;
+}
+
+.kb-content-box-gray {
+    background-color: #e2e2e2;
+    border: 1px solid #bdbdbd;
+}
+
+.kb-content-box-green {
+    background-color: #d9edc2 !important;
+    border: 1px solid #b2ce96 !important;
+}
+
+.kb-content-box-purple {
+    background-color: #e2e2f9;
+    border: 1px solid #bebde9;
+}
+
+.kb-content-box-red {
+    background-color: #f9dbdb !important;
+    border: 1px solid #e9b3b3 !important;
+}
+
+.kb-content-box-yellow {
+    background-color: #fef5c4;
+    border: 1px solid #fadf98;
+}
+
+.kb-box-shadow-red {
+    -webkit-box-shadow: -1px -1px 30px 0px rgba(255, 2, 2, 1) !important;
+    -moz-box-shadow: -1px -1px 30px 0px rgba(255, 2, 2, 1) !important;
+    box-shadow: -1px -1px 30px 0px rgba(255, 2, 2, 1) !important;
+}
+.kb-box-shadow-green {
+    -webkit-box-shadow: 1px 1px 30px 0px rgba(0, 255, 2, 1) !important;
+    -moz-box-shadow:    1px 1px 30px 0px rgba(0, 255, 2, 1) !important;
+    box-shadow:         1px 1px 30px 0px rgba(0, 255, 2, 1) !important;
+}
