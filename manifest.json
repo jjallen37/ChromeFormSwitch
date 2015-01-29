@@ -1,20 +1,19 @@
 {
+  "background"		: {
+    "page"			: "html/background.html"
+  },
   "content_scripts": [ {
     "matches": [ "<all_urls>" ],
     "all_frames": true,
     "css": [
-//      "css/jquery-ui.css",
-//      "css/keyboard.css",
-      "css/content.css"
+      "css/inject.css",
+      "css/inject2.css"
     ],
     "js": [
       "js/jquery.js",
-//      "js/jquery-ui.min.js",
-//      "js/jquery.keyboard.js",
-//      "js/jquery.keyboard.extension-switch-navigation.js",
       "js/jquery.scrollTo.min.js",
       "js/KB_Node.js",
-      "js/content.js"
+      "js/inject.js"
     ],
     "run_at": "document_end"
   }],
@@ -25,14 +24,10 @@
   "version": "1.0.0",
   "web_accessible_resources": [
     "js/jquery.js",
-//    "js/jquery-ui.min.js",
-//    "js/jquery.keyboard.js",
-//    "js/jquery.keyboard.extension-switch-navigation.js",
     "js/jquery.scrollTo.min.js",
     "js/KB_Node.js",
-    "js/content.js",
-//    "css/jquery-ui.css",
-//    "css/keyboard.css",
-    "css/content.css"
+    "js/inject.js",
+    "js/iframe/*",
+    "html/iframe/*"
   ]
 }

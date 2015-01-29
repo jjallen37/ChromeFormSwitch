@@ -1,0 +1,62 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* iHeart //////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#menu-container{
+    position:fixed;
+    left: 0px;
+    bottom:0px;
+    height:50px;
+    width:100%;
+    background:#999;
+    z-index:999999;
+    border: 2px solid black;
+    opacity:0.5;
+}
+
+#menu-container iframe{
+    /*border:none !important;*/
+    border:none;
+    vertical-align:top;
+    width:100%;
+    /*opacity:0.5;*/
+    z-index:20;
+    background-color: #ffffff;
+}
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+#switch-navigation-wrapper {
+    min-height: 100%;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+#menu-container, #switch-navigation-push {
+    height: 50px; /* '.push' must be the same height as 'footer' */
+}
+
+/*
+
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+*/
+
+#switch-navigation-overlay {
+    position:fixed;
+    height:100%;
+    width:100%;
+    background-color:#333;
+    opacity: .25 ;
+    z-index:99 ;
+}
+
+.switch-navigation-usable {
+    position:relative !important;
+    z-index:100 !important;
+    /*background-color:#3D2;*/
+}
+

@@ -10,7 +10,8 @@
  */
 
 var NODE_CLASS = 'kb-content-box-blue';
-var SELECTED_CLASS = 'kb-content-box-green';
+//var SELECTED_CLASS = 'kb-content-box-green';
+var SELECTED_CLASS = 'switch-navigation-usable';
 var NUM_LIVES = 1;
 
 var KB_Node = function(parent, elt){
@@ -89,4 +90,12 @@ KB_Node.prototype.decorateNode = function(toggle){
         }
     }
     $(selectedNode.elt).toggleClass(SELECTED_CLASS, toggle);
+
+    //if (selectedNode.parent == null) {
+    //    $("#switch-navigation-overlay").css({"z-index": 2, "opacity": .5});
+    //    $(this).addClass("switch-navigation-usable");
+    //} else {
+    //    $("#switch-navigation-overlay").css({"z-index": 0, "opacity": .5});
+        //$(this).removeClass("switch-navigation-usable");
+    //}
 };

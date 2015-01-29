@@ -9,6 +9,11 @@ var STATE_INPUT = 1;
 var CURRENT_STATE = STATE_WEB;
 var node = null;
 
+initNavigation();
+
+/*
+
+ */
 function initNavigation(){
     var SELECT_KEY = 37;
     var SCAN_KEY = 39;
@@ -141,27 +146,4 @@ function initNavigation(){
     }
 }
 
-function initKeyboard(){
-    var INPUT_SELECTORS = ['input[type=text]:visible','textarea:visible'];
-
-    var keyboards = $(document.body).find(INPUT_SELECTORS.join(','));
-    $(keyboards).each(function (i, input){
-        $(input).keyboard({
-            alwaysOpen: false
-        }).addSwitchNavigation({
-            position   : [0,-1],     // set start position [row-number, key-index]
-            toggleMode : true,     // true = navigate the virtual keyboard, false = navigate in input/textarea
-            focusClass : 'hasFocus' // css class added when toggle mode is on
-        });
-
-        // Binding to the "beforeClose" event - it has an extra parameter ("accepted")
-        $(input).bind('hidden.keyboard', function(e, keyboard, el, accepted){
-            CURRENT_STATE = STATE_WEB;
-            //$(document.body).scrollTop($(node.getSelectedNode().elt).offset().top - 100);
-        });
-    });
-}
-
-initNavigation();
-initKeyboard();
 
