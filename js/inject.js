@@ -134,7 +134,8 @@ var Inject = (function (){
 			case 'iframe-loaded': message_onIframeLoaded(request.data); break;
 			case 'action-scan': message_onScanClicked(request.data); break;
 			case 'action-select': message_onSelectClicked(request.data); break;
-			case 'action-back': message_onBackClicked(request.data); break;
+			case 'action-scroll-down': message_onScrollDownClicked(request.data); break;
+			case 'action-scroll-up': message_onScrollUpClicked(request.data); break;
 			case 'action-kb-accept': message_onKbAccept(request.data); break;
 			case 'action-kb-cancel': message_onKbCancel(request.data); break;
 		}
@@ -199,7 +200,11 @@ var Inject = (function (){
 		}
 	};
 
-	function message_onBackClicked (data){
+	function message_onScrollDownClicked (data){
+		window.scrollBy(0,50); // horizontal and vertical scroll increments
+	};
+	function message_onScrollUpClicked (data){
+		window.scrollBy(0,-50); // horizontal and vertical scroll increments
 	};
 	function message_onKbAccept (data){
 		_state = STATES.MENU;
