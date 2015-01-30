@@ -30,7 +30,7 @@ var Menu = (function (){
 
     // events -------------------------------------------------------------------
     function onMessage (request){
-        //console.log('iframe menu message:'+request.message);
+        console.log('iframe menu message:'+request.message);
         switch (request.message){
             case 'input-scan':
                 console.log('menu sel');

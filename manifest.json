@@ -30,7 +30,8 @@
     "js/KB_Node.js",
     "js/inject.js",
     "js/iframe/*",
-    "html/iframe/*",
-    "css/images/*"
+    "html/iframe/*"
+//    "css/images/*",
+//    "css/iframe/*",
   ]
 }

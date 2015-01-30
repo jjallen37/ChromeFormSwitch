@@ -17,15 +17,20 @@ var Keyboard = (function (){
         _iframe.setListener(onMessage);
 
         // Hook up keyboard
-        $('#textInput').keyboard({
-            alwaysOpen      :   true,
-            initialFocus    :   false,
-            position        :   {
-                //of  :   '$("#textInput")',
-                my  :   'center bottom',
-                at  :   'center top'
-            }
-        });
+        $('#textInput')
+            .keyboard({
+                alwaysOpen      :   true,
+                initialFocus    :   false,
+                position        :   {
+                    //of  :   '$("#textInput")',
+                    my  :   'center bottom',
+                    at  :   'center top'
+                },
+                accepted : function(e, keyboard, el){
+                    console.log('The content "' + el.value + '" was accepted!');
+                    _iframe.tell('action-kb-accept', {});
+                }})
+            .addSwitchNavigation();
         //TODO Switch Accessible extension
     };
 
@@ -34,12 +39,13 @@ var Keyboard = (function (){
     // events -------------------------------------------------------------------
     function onMessage (request){
         //console.log('iframe menu message:'+request.message);
+        var temp = $('#textInput');
         switch (request.message){
             case 'input-scan':
-                console.log("kb scan");
+                temp.trigger('scan');
                 break;
             case 'input-select':
-                console.log("kb sel");
+                temp.trigger('select');
                 break;
         }
     };

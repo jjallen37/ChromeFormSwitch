@@ -44,7 +44,6 @@ var Inject = (function (){
 	
 	// initialize ---------------------------------------------------------------
 	_this.init = function (){
-
 		// Set up sticky footer
 		var push = $('<div />', {id:'switch-navigation-push'});
 		push.appendTo(document.body);
@@ -69,9 +68,9 @@ var Inject = (function (){
 		//});
 
 		// add the "menu" iframe
-		//getView('keyboard', _container).iframe.hide();
-		getView('keyboard', _container);
-		//getView('menu', _container);
+		//getView('keyboard', $(document.body)).iframe.hide();
+		getView('keyboard', _container).iframe.hide();
+		getView('menu', _container);
 
 		// listen to the iframes/webpages message
 		window.addEventListener("message", dom_onMessage, false);
@@ -184,10 +183,12 @@ var Inject = (function (){
 		var selectedNode = _node.selectNode();
 		if (selectedNode.isLeaf){
 			var aElt = selectedNode.elt;
-			if ( $(aElt).is('input[type=text],textarea')){
+			if ( $(aElt).is('input[type=text]')){
 				_state = STATES.KB;
 
-			    //$(aElt).focus();
+				//getView('keyboard', $(document.body)).iframe.show();
+				getView('keyboard', _container).iframe.show();
+				getView('menu', _container).iframe.hide();
 			} else {
 				$(aElt)[0].click();
 			}
@@ -202,9 +203,13 @@ var Inject = (function (){
 	};
 	function message_onKbAccept (data){
 		_state = STATES.MENU;
+		getView('keyboard', _container).iframe.hide();
+		getView('menu', _container).iframe.show();
 	};
 	function message_onKbCancel (data){
 		_state = STATES.MENU;
+		getView('keyboard', _container).iframe.hide();
+		getView('menu', _container).iframe.show();
 	};
 
 	function buildGraph(node){
