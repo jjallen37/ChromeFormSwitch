@@ -33,9 +33,11 @@ var Menu = (function (){
         //console.log('iframe menu message:'+request.message);
         switch (request.message){
             case 'input-scan':
+                console.log('menu sel');
                 message_scan();
                 break;
             case 'input-select':
+                console.log('menu sel');
                 message_select();
                 break;
         }

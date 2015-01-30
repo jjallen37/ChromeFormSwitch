@@ -4,10 +4,23 @@ var Inject = (function (){
 		CONTAINER		: 'menu-container',
 		IFRAME_PREFIX	: 'menu-iframe-'
 	};
+	/*
+		Character codes for the scan and select input.
+	 */
 	var KEYS = {
 		SCAN		: 39,
 		SELECT		: 37
 	};
+	/*
+		Program state that handles scan/select input
+	 */
+	var STATES = {
+		MENU		: 0,
+		KB			: 1
+	};
+	/*
+		All tabbable/selectable elements
+	 */
 	var LEAF_SELECTORS = [
 		'a[href]:visible',
 		'input:visible',
@@ -24,6 +37,7 @@ var Inject = (function (){
 	// variables ----------------------------------------------------------------
 	var _this		= {},
 		_views		= {},
+		_state		= STATES.MENU,
 		_container	= null,
 		_overlay	= null,
 		_node		= null;
@@ -55,7 +69,9 @@ var Inject = (function (){
 		//});
 
 		// add the "menu" iframe
-		getView('menu', _container);
+		//getView('keyboard', _container).iframe.hide();
+		getView('keyboard', _container);
+		//getView('menu', _container);
 
 		// listen to the iframes/webpages message
 		window.addEventListener("message", dom_onMessage, false);
@@ -64,19 +80,23 @@ var Inject = (function (){
 		chrome.extension.onMessage.addListener(background_onMessage);
 
 		$(document).on('keydown',function(e){
+			var view = (_state == STATES.MENU) ? 'menu' : 'keyboard';
 			switch (e.which){
 				case KEYS.SCAN:
-					tell ('input-scan');
+					console.log('inject scan');
+					// tell the "comment" iframe to show dynamic info (the page title)
+					tell ('input-scan',{view:view, url:window.location.href});
 					e.preventDefault();
 					break;
 				case KEYS.SELECT:
-					tell ('input-select');
+					console.log('inject sel');
+					tell ('input-select',{view:view, url:window.location.href});
 					e.preventDefault();
 					break;
 			}
 		});
 	};
-	
+
 	// private functions --------------------------------------------------------
 	function getView (id){
 		// return the view if it's already created
@@ -116,6 +136,8 @@ var Inject = (function (){
 			case 'action-scan': message_onScanClicked(request.data); break;
 			case 'action-select': message_onSelectClicked(request.data); break;
 			case 'action-back': message_onBackClicked(request.data); break;
+			case 'action-kb-accept': message_onKbAccept(request.data); break;
+			case 'action-kb-cancel': message_onKbCancel(request.data); break;
 		}
 	};
 	
@@ -154,7 +176,6 @@ var Inject = (function (){
 	};
 	
 	function message_onScanClicked (data){
-
 		_node = _node.scanNode();
 		$(document.body).scrollTop($(_node.getSelectedNode().elt).offset().top - 100);
 	};
@@ -163,11 +184,13 @@ var Inject = (function (){
 		var selectedNode = _node.selectNode();
 		if (selectedNode.isLeaf){
 			var aElt = selectedNode.elt;
-			//if ( $(aElt).hasClass('ui-keyboard-input')){
-			//    CURRENT_STATE = STATE_INPUT;
-			//    $(aElt).focus();
-			//} else {
-			$(aElt)[0].click();
+			if ( $(aElt).is('input[type=text],textarea')){
+				_state = STATES.KB;
+
+			    //$(aElt).focus();
+			} else {
+				$(aElt)[0].click();
+			}
 			//}
 		} else {
 			_node = selectedNode;
@@ -176,6 +199,12 @@ var Inject = (function (){
 	};
 
 	function message_onBackClicked (data){
+	};
+	function message_onKbAccept (data){
+		_state = STATES.MENU;
+	};
+	function message_onKbCancel (data){
+		_state = STATES.MENU;
 	};
 
 	function buildGraph(node){
