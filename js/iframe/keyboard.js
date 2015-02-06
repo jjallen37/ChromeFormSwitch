@@ -19,22 +19,26 @@ var Keyboard = (function (){
         // Hook up keyboard
         $('#textInput')
             .keyboard({
+                stayOpen        :   true,
                 alwaysOpen      :   true,
                 initialFocus    :   false,
-                position        :   {
-                    //of  :   '$("#textInput")',
-                    my  :   'center bottom',
-                    at  :   'center top'
-                },
-                accepted : function(e, keyboard, el){
-                    console.log('The content "' + el.value + '" was accepted!');
-                    _iframe.tell('action-kb-accept', {});
-                }})
+                usePreview      :   false,
+                accepted        :   keyboard_accepted,
+                change          :   keyboard_change})
             .addSwitchNavigation();
         //TODO Switch Accessible extension
     };
 
     // private functions --------------------------------------------------------
+    function keyboard_accepted(e,keyboard,el){
+        console.log('The content "' + el.value + '" was accepted!');
+        parent.focus();
+        _iframe.tell('action-kb-accept', {});
+    }
+
+    function keyboard_change(e,keyboard,el){
+        console.log('The content is currently "' + el.value + '"');
+    }
 
     // events -------------------------------------------------------------------
     function onMessage (request){

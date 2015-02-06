@@ -29,13 +29,20 @@
     height:300px;
     position:fixed;
     left:50%;
-    top:50%;
+    top:90%;
     margin:-150px 0 0 -250px;
     border:none !important;
 
     z-index:100 ;
     /*margin: -50px 0 0 243px ;*/
 }
+
+/*
+
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+*/
 
 * {
     margin: 0;
@@ -49,27 +56,5 @@ html, body {
 }
 #menu-container, #switch-navigation-push {
     height: 50px; /* '.push' must be the same height as 'footer' */
-}
-
-/*
-
-Sticky Footer by Ryan Fait
-http://ryanfait.com/
-
-*/
-
-#switch-navigation-overlay {
-    position:fixed;
-    height:100%;
-    width:100%;
-    background-color:#333;
-    opacity: .25 ;
-    z-index:99 ;
-}
-
-.switch-navigation-usable {
-    position:relative !important;
-    z-index:100 !important;
-    /*background-color:#3D2;*/
 }
 

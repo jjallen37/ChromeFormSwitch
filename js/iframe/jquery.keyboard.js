@@ -73,6 +73,9 @@ $.keyboard = function(el, options){
 		// make a copy of the original keyboard position
 		o.position.orig_at = o.position.at;
 
+		/*   Uncommenting this will force focus on load
+		//FOCUS BUG
+
 		// Check if caret position is saved when input is hidden or loses focus
 		// (*cough* all versions of IE and I think Opera has/had an issue as well
 		base.temp = $('<div style="height:0px;width:0px;overflow:hidden;"><input type="text" value="testing"></div>')
@@ -81,6 +84,9 @@ $.keyboard = function(el, options){
 		// Also save caret position of the input if it is locked
 		base.checkCaret = ( o.lockInput || base.temp.find('input').hide().show().caret().start !== 3 );
 		base.temp.remove();
+
+		 */
+
 		// [shift, alt, meta]
 		base.last = { start:0, end:0, key:'', val:'', keyset: [false, false, false] };
 
@@ -594,7 +600,7 @@ $.keyboard = function(el, options){
 				action = action === ':' ? ':' : action.split(':')[0];
 				if (timer - (base.last.eventTime || 0) < o.preventDoubleEventTime) { return; }
 				base.last.eventTime = timer;
-				base.$preview.focus();
+				//base.$preview.focus(); //FOCUS BUG
 				base.$lastKey = $this;
 				base.last.key = $this.attr('data-curtxt');
 				// Start caret in IE when not focused (happens with each virtual keyboard button click
@@ -612,12 +618,14 @@ $.keyboard = function(el, options){
 						base.showKeySet(this);
 					}
 				}
+
+				//FOCUS BUG
 				// set caret if caret moved by action function; also, attempt to fix issue #131
-				base.$preview.focus().caret( base.last );
-				base.checkCombos();
-				base.checkMaxLength();
-				base.$el.trigger( 'change.keyboard', [ base, base.el ] );
-				base.last.val = base.$preview.val();
+				//base.$preview.focus().caret( base.last );
+				//base.checkCombos();
+				//base.checkMaxLength();
+				//base.$el.trigger( 'change.keyboard', [ base, base.el ] );
+				//base.last.val = base.$preview.val();
 
 				if ($.isFunction(o.change)){
 					o.change( $.Event("change"), base, base.el );
@@ -748,7 +756,6 @@ $.keyboard = function(el, options){
 			.caret(t, t);
 
 		base.last.start = base.last.end = t; // save caret in case of bksp
-
 	};
 
 	// check max length

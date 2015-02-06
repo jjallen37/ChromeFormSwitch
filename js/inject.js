@@ -49,27 +49,17 @@ var Inject = (function (){
 		push.appendTo(document.body);
 		$(document.body).wrapInner($('<div/>',{id:'switch-navigation-wrapper'}));
 
-		// Create
+		// Create NavTree
 		_node = new KB_Node(null,document.body); // Root node
 		buildGraph(_node);
 		_node.decorateNode(true);
-
-		// Create overlay
-		//_overlay = $('<div />',{id:'switch-navigation-overlay'});
-		//_overlay.prependTo($('#switch-navigation-wrapper'));
 
 		// create the main container
 		_container = $('<div />', {id:ID.CONTAINER});
 		_container.appendTo(document.body);
 
-		//$('input').click(function(e){
-		//	console.log("this:"+this);
-		//	$(this).spotlight();
-		//});
-
 		// add the "menu" iframe
-		//getView('keyboard', $(document.body)).iframe.hide();
-		getView('keyboard', _container).iframe.hide();
+		//getView('keyboard', _container).iframe.hide();
 		getView('menu', _container);
 
 		// listen to the iframes/webpages message
@@ -78,17 +68,16 @@ var Inject = (function (){
 		// listen to the Control Center (background.js) messages
 		chrome.extension.onMessage.addListener(background_onMessage);
 
+
 		$(document).on('keydown',function(e){
 			var view = (_state == STATES.MENU) ? 'menu' : 'keyboard';
 			switch (e.which){
 				case KEYS.SCAN:
-					console.log('inject scan');
 					// tell the "comment" iframe to show dynamic info (the page title)
 					tell ('input-scan',{view:view, url:window.location.href});
 					e.preventDefault();
 					break;
 				case KEYS.SELECT:
-					console.log('inject sel');
 					tell ('input-select',{view:view, url:window.location.href});
 					e.preventDefault();
 					break;

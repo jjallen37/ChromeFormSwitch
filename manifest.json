@@ -10,9 +10,10 @@
       "css/inject2.css"
     ],
     "js": [
-      "js/jquery.js",
-      "js/jquery.spotlight.js",
-      "js/jquery.scrollTo.min.js",
+      "jquery/jquery.js",
+      "jquery/jquery-ui.min.js",
+      "jquery/jquery.spotlight.js",
+      "jquery/jquery.scrollTo.min.js",
       "js/KB_Node.js",
       "js/inject.js"
     ],
@@ -24,14 +25,13 @@
   "permissions": [ "tabs", "<all_urls>" ],
   "version": "1.0.0",
   "web_accessible_resources": [
-    "js/jquery.js",
-    "js/jquery.spotlight.js",
-    "js/jquery.scrollTo.min.js",
+    "jquery/jquery.js",
+    "jquery/jquery-ui.min.js",
+    "jquery/jquery.spotlight.js",
+    "jquery/jquery.scrollTo.min.js",
     "js/KB_Node.js",
     "js/inject.js",
     "js/iframe/*",
     "html/iframe/*"
-//    "css/images/*",
-//    "css/iframe/*",
   ]
 }

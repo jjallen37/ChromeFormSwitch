@@ -22,9 +22,6 @@
 			onHide: function(){}
 		}, options);
 		
-		// Do a compatibility check
-		if(!jQuery.support.opacity) return false;
-		
 		if($('#spotlight').size() == 0){
 			// Add the overlay div
 			$('body').append('<div id="spotlight"></div>');
@@ -66,7 +63,8 @@
 			}
 			
 			// Set up click to close
-			spotlight.live(settings.exitEvent, function(){
+			spotlight.on(settings.exitEvent+' exit_event', handle_exit_event);
+			function handle_exit_event(e){
 				if(settings.animate){
 					spotlight.animate({opacity: 0}, settings.speed, settings.easing, function(){
 						if(currentPos == 'static') element.css('position', 'static');
@@ -83,7 +81,7 @@
 					// Trigger the onHide callback
 					settings.onHide.call(this);
 				}
-			});
+			};
 		}
 
 		// Returns the jQuery object to allow for chainability.  
