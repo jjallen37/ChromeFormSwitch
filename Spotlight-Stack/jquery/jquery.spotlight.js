@@ -24,16 +24,13 @@
 		}, options);
 
 		// if the spotlight has not been created yet
-		if($('#spotlight').size() == 0){
-			// Add the overlay div
-			//var spotlight_id = '"spotlight-' + settings.z_index + '"';
-			//$('body').append('<div id='+spotlight_id+'></div>');
-			$('body').append('<div id="spotlight"></div>');
-
+		var spotlight_id = 'spotlight-' + settings.z_index;
+		if($('#'+spotlight_id).size() == 0){
 			// Get our elements
 			var element = $(this);
-			var spotlight = $('#spotlight');
-			
+			//var spotlight = $('</div>',{id:spotlight_id}); // Create layer for this z-index
+			var spotlight = $('<div id="'+spotlight_id+'"></div>');
+
 			// Set the CSS styles
 			spotlight.css({
 				'position':'fixed', 
@@ -45,7 +42,10 @@
 				'width':'100%', 
 				'z-index':''+settings.z_index
 			});
-			
+
+			// Add the overlay div
+			$(this).after(spotlight);
+
 			// Set element CSS
 			var currentPos = element.css('position');
 			if(currentPos == 'static'){

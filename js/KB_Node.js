@@ -11,6 +11,7 @@
 
 var NODE_CLASS = 'kb-content-box-blue';
 var SELECTED_CLASS = 'kb-box-shadow-blue';
+
 //var NODE_CLASS = '';
 //var SELECTED_CLASS = '';
 //var NODE_CLASS = 'switch-navigation-usable';
@@ -66,8 +67,8 @@ KB_Node.prototype.scanNode = function(){
     if (this.parent == null){
         this.decorateNode(true); // Full cycle, no lives
     } else if (nextNode.lives == 0){ // Reached end of row
-        //this.parent.resetLives();
-        //this.parent.getSelectedNode().lives--;
+        this.parent.resetLives();
+        this.parent.getSelectedNode().lives--;
         this.parent.decorateNode(this.parent);
         return this.parent; // Return focus to parent
     } else {

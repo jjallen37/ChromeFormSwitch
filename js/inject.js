@@ -170,8 +170,9 @@ var Inject = (function (){
 	};
 		
 	function message_onSelectClicked (data){
-		$(_node.elt).trigger('spotlight_exit_event');
+		//$(_node.elt).trigger('spotlight_exit_event');
 		var selectedNode = _node.selectNode();
+		$(selectedNode.elt).trigger('spotlight_exit_event');
 		if (selectedNode.isLeaf){
 			var aElt = selectedNode.elt;
 			if ( $(aElt).is('input[type=text]')){
