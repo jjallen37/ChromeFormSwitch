@@ -23,99 +23,46 @@
     <favorites_list name="Switch-Navigation" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="inject.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/inject.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="2130">
-              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding>
-                <element signature="e#116#186#0" expanded="false" />
-                <element signature="e#189#245#0" expanded="false" />
-                <element signature="e#258#291#0" expanded="false" />
-                <element signature="e#294#348#0" expanded="false" />
-                <element signature="e#363#391#0" expanded="false" />
-                <element signature="e#394#436#0" expanded="false" />
-                <element signature="e#459#692#0" expanded="false" />
-                <element signature="e#503#524#0" expanded="false" />
-                <element signature="e#2656#2702#0" expanded="false" />
-                <element signature="e#2822#2969#0" expanded="false" />
-                <element signature="e#2922#2964#0" expanded="false" />
-                <element signature="e#3749#3917#0" expanded="false" />
-                <element signature="e#3848#3874#0" expanded="false" />
-                <element signature="e#3878#3914#0" expanded="false" />
-                <element signature="e#4024#4090#0" expanded="false" />
-                <element signature="e#4212#4494#0" expanded="false" />
-                <element signature="e#4325#4386#0" expanded="false" />
-                <element signature="e#5030#5060#0" expanded="false" />
-                <element signature="e#5077#5189#0" expanded="false" />
-                <element signature="e#5239#5313#0" expanded="false" />
-                <element signature="e#5357#5432#0" expanded="false" />
-                <element signature="e#5469#5591#0" expanded="false" />
-                <element signature="e#5628#5750#0" expanded="false" />
-                <element signature="e#5779#6486#0" expanded="false" />
-                <element signature="e#5870#5909#0" expanded="false" />
-                <element signature="e#6085#6178#0" expanded="false" />
-                <element signature="e#6235#6307#0" expanded="false" />
-                <element signature="e#6373#6481#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KB_Node.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/KB_Node.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1485">
-              <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/iframe/menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2010">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/iframe/menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7272727" vertical-offset="0" max-vertical-offset="450">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="keyboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/iframe/keyboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.7727275" vertical-offset="0" max-vertical-offset="465">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/manifest.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25695932" vertical-offset="0" max-vertical-offset="934">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="inject.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/inject.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7217573" vertical-offset="1950" max-vertical-offset="3720">
+                  <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="inject2.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/inject2.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1065">
+                  <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="KB_Node.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/KB_Node.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.95711297" vertical-offset="450" max-vertical-offset="1485">
+                  <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -131,17 +78,20 @@
         <option value="$USER_HOME$/Downloads/jQuery-Spotlight-master/demo.html" />
         <option value="$PROJECT_DIR$/css/menu.css" />
         <option value="$PROJECT_DIR$/test/test.css" />
-        <option value="$PROJECT_DIR$/test/test.html" />
         <option value="$PROJECT_DIR$/js/iframe/menu.js" />
         <option value="$PROJECT_DIR$/js/iframe/jquery.keyboard.extension-switch-navigation.js" />
         <option value="$PROJECT_DIR$/css/inject.css" />
         <option value="$PROJECT_DIR$/js/iframe/keyboard.js" />
         <option value="$PROJECT_DIR$/js/iframe/jquery.keyboard.js" />
-        <option value="$PROJECT_DIR$/js/inject.js" />
-        <option value="$PROJECT_DIR$/js/KB_Node.js" />
         <option value="$PROJECT_DIR$/html/iframe/menu.html" />
         <option value="$PROJECT_DIR$/html/iframe/keyboard.html" />
         <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/test/test.html" />
+        <option value="$PROJECT_DIR$/test/test.js" />
+        <option value="$PROJECT_DIR$/jquery/jquery.spotlight.js" />
+        <option value="$PROJECT_DIR$/css/inject2.css" />
+        <option value="$PROJECT_DIR$/js/KB_Node.js" />
+        <option value="$PROJECT_DIR$/js/inject.js" />
       </list>
     </option>
   </component>
@@ -204,7 +154,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Switch-Navigation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChromeFormSwitch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,7 +278,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1203125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1203125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.240625" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -670,14 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/inject2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42455623" vertical-offset="118" max-vertical-offset="1080">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/iframe/menu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.044378698" vertical-offset="0" max-vertical-offset="676">
@@ -698,14 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4508368" vertical-offset="34" max-vertical-offset="990">
           <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.369379" vertical-offset="0" max-vertical-offset="934">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -760,14 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10983264" vertical-offset="0" max-vertical-offset="956">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/iframe/jquery.keyboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36585367" vertical-offset="795" max-vertical-offset="28905">
@@ -776,51 +716,6 @@
             <element signature="n#!!doc" expanded="true" />
             <marker date="1423170376000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/inject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="2130">
-          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding>
-            <element signature="e#116#186#0" expanded="false" />
-            <element signature="e#189#245#0" expanded="false" />
-            <element signature="e#258#291#0" expanded="false" />
-            <element signature="e#294#348#0" expanded="false" />
-            <element signature="e#363#391#0" expanded="false" />
-            <element signature="e#394#436#0" expanded="false" />
-            <element signature="e#459#692#0" expanded="false" />
-            <element signature="e#503#524#0" expanded="false" />
-            <element signature="e#2656#2702#0" expanded="false" />
-            <element signature="e#2822#2969#0" expanded="false" />
-            <element signature="e#2922#2964#0" expanded="false" />
-            <element signature="e#3749#3917#0" expanded="false" />
-            <element signature="e#3848#3874#0" expanded="false" />
-            <element signature="e#3878#3914#0" expanded="false" />
-            <element signature="e#4024#4090#0" expanded="false" />
-            <element signature="e#4212#4494#0" expanded="false" />
-            <element signature="e#4325#4386#0" expanded="false" />
-            <element signature="e#5030#5060#0" expanded="false" />
-            <element signature="e#5077#5189#0" expanded="false" />
-            <element signature="e#5239#5313#0" expanded="false" />
-            <element signature="e#5357#5432#0" expanded="false" />
-            <element signature="e#5469#5591#0" expanded="false" />
-            <element signature="e#5628#5750#0" expanded="false" />
-            <element signature="e#5779#6486#0" expanded="false" />
-            <element signature="e#5870#5909#0" expanded="false" />
-            <element signature="e#6085#6178#0" expanded="false" />
-            <element signature="e#6235#6307#0" expanded="false" />
-            <element signature="e#6373#6481#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/KB_Node.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1485">
-          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -834,7 +729,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/iframe/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7272727" vertical-offset="0" max-vertical-offset="450">
+        <state vertical-scroll-proportion="0.06423983" vertical-offset="0" max-vertical-offset="934">
           <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding />
         </state>
@@ -842,7 +737,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/iframe/keyboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7727275" vertical-offset="0" max-vertical-offset="465">
+        <state vertical-scroll-proportion="0.1124197" vertical-offset="0" max-vertical-offset="934">
           <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -850,10 +745,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28907922" vertical-offset="0" max-vertical-offset="934">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2667364" vertical-offset="0" max-vertical-offset="956">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25695932" vertical-offset="0" max-vertical-offset="934">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.38543898" vertical-offset="0" max-vertical-offset="934">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery/jquery.spotlight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51778245" vertical-offset="450" max-vertical-offset="1470">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Switch-Navigation/css/inject2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13702929" vertical-offset="154" max-vertical-offset="1110">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../KB_3/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.242842" vertical-offset="2430" max-vertical-offset="7395">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Switch-Navigation/js/KB_Node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7332636" vertical-offset="619" max-vertical-offset="1575">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/inject2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1065">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/KB_Node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95711297" vertical-offset="450" max-vertical-offset="1485">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/inject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7217573" vertical-offset="1950" max-vertical-offset="3720">
+          <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
           <folding />
         </state>
       </provider>

@@ -2,14 +2,20 @@
  * Created by jjallen on 1/29/15.
  */
 $(document).ready(function(){
-    $("div.usable").hover(
-        function(e){
-            $("#overlay").css({"z-index":2,"opacity":.5});
-            $(this).addClass("active");
-        },
-        function(e){
-            $("#overlay").css({"z-index":0,"opacity":0});
-            $(this).removeClass("active");
-        }
-    );});
+
+    var div = null;
+    //$('#div1').click(function(){
+    //    console.log('spotlight 1');
+    //    $('#spotlight2').spotlight();
+    //});
+    $('#spotlight3').click(function(){
+        if (div === null){return;}
+
+        $(div).trigger('exit_event');
+    });
+    $('div').click(function(){
+        $(this).spotlight({color:'#ff0000'});
+        div = this;
+    });
+});
 

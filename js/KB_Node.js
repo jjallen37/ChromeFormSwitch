@@ -10,7 +10,7 @@
  */
 
 var NODE_CLASS = 'kb-content-box-blue';
-var SELECTED_CLASS = 'kb-content-box-green';
+var SELECTED_CLASS = 'kb-box-shadow-blue';
 //var NODE_CLASS = '';
 //var SELECTED_CLASS = '';
 //var NODE_CLASS = 'switch-navigation-usable';
@@ -91,6 +91,6 @@ KB_Node.prototype.decorateNode = function(toggle){
             $(selectedNode.elt).blur();
         }
     }
-    //$(selectedNode.elt).toggleClass(SELECTED_CLASS, toggle);
+    $(selectedNode.elt).toggleClass(SELECTED_CLASS, toggle);
     $(this.elt).spotlight();
 };

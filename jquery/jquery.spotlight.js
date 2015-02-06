@@ -17,7 +17,7 @@
 			color: '#333',
 			animate: true,
 			easing: '',
-			exitEvent: 'click',
+			exitEvent: 'spotlight_exit_event',
 			onShow: function(){},
 			onHide: function(){}
 		}, options);
@@ -63,8 +63,8 @@
 			}
 			
 			// Set up click to close
-			spotlight.on(settings.exitEvent+' exit_event', handle_exit_event);
-			function handle_exit_event(e){
+			var handle_exit_event = function(e){
+				console.log('handle exit event');
 				if(settings.animate){
 					spotlight.animate({opacity: 0}, settings.speed, settings.easing, function(){
 						if(currentPos == 'static') element.css('position', 'static');
@@ -82,6 +82,8 @@
 					settings.onHide.call(this);
 				}
 			};
+			// Register exit event handling to the displayed element, as opposed to the spotlight div.
+			$(this).on(settings.exitEvent, handle_exit_event);
 		}
 
 		// Returns the jQuery object to allow for chainability.  

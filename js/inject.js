@@ -170,6 +170,7 @@ var Inject = (function (){
 	};
 		
 	function message_onSelectClicked (data){
+		$(_node.elt).trigger('spotlight_exit_event');
 		var selectedNode = _node.selectNode();
 		if (selectedNode.isLeaf){
 			var aElt = selectedNode.elt;
