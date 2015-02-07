@@ -14,7 +14,7 @@
       "jquery/jquery-ui.min.js",
       "jquery/jquery.spotlight.js",
       "jquery/jquery.scrollTo.min.js",
-      "js/KB_Node.js",
+      "js/NavTree.js",
       "js/inject.js"
     ],
     "run_at": "document_end"
@@ -29,7 +29,7 @@
     "jquery/jquery-ui.min.js",
     "jquery/jquery.spotlight.js",
     "jquery/jquery.scrollTo.min.js",
-    "js/KB_Node.js",
+    "js/NavTree.js",
     "js/inject.js",
     "js/iframe/*",
     "html/iframe/*"

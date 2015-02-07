@@ -50,8 +50,8 @@ var Inject = (function (){
 		$(document.body).wrapInner($('<div/>',{id:'switch-navigation-wrapper'}));
 
 		// Create NavTree
-		_node = new KB_Node(null,document.body); // Root node
-		buildGraph(_node);
+		_node = new NavTree(null,document.body); // Root node
+		_node = NavTree.buildTree(_node,_node.elt);
 		_node.decorateNode(true);
 
 		// create the main container
@@ -208,34 +208,34 @@ var Inject = (function (){
 		getView('menu', _container).iframe.show();
 	};
 
-	function buildGraph(node){
-		var elt = $(node.elt);
-		// Base case for graph
-		if (elt.is(LEAF_SELECTORS.join(','))){
-			node.isLeaf = true;
-			return;
-		}
-
-		// All children of current node with leaf descendants
-		var branches = elt.children().has(LEAF_SELECTORS.join(','));
-		LEAF_SELECTORS.forEach(function(selector,index,array){
-			branches = branches.add('> '+selector, elt); // Add leafs from the current directory
-		});
-
-		// Propagate link nodes
-		if (branches.length == 1){
-			node.elt = branches.first()[0];
-			buildGraph(node);
-			return;
-		}
-
-		// Create next layer of nodes
-		branches.each(function(i, elt){
-			var childNode = new KB_Node(node, elt);
-			buildGraph(childNode);
-			node.children.push(childNode);
-		});
-	}
+	//function buildGraph(node){
+	//	var elt = $(node.elt);
+	//	// Base case for graph
+	//	if (elt.is(LEAF_SELECTORS.join(','))){
+	//		node.isLeaf = true;
+	//		return;
+	//	}
+    //
+	//	// All children of current node with leaf descendants
+	//	var branches = elt.children().has(LEAF_SELECTORS.join(','));
+	//	LEAF_SELECTORS.forEach(function(selector,index,array){
+	//		branches = branches.add('> '+selector, elt); // Add leafs from the current directory
+	//	});
+    //
+	//	// Propagate link nodes
+	//	if (branches.length == 1){
+	//		node.elt = branches.first()[0];
+	//		buildGraph(node);
+	//		return;
+	//	}
+    //
+	//	// Create next layer of nodes
+	//	branches.each(function(i, elt){
+	//		var childNode = new NavTree(node, elt);
+	//		buildGraph(childNode);
+	//		node.children.push(childNode);
+	//	});
+	//}
 
 	return _this;
 }());

@@ -58,6 +58,7 @@ from http://www.studiopress.com/design/colored-content-boxes-buttons.htm
     -moz-box-shadow: -1px -1px 30px 0px rgba(255, 2, 2, 1) !important;
     box-shadow: -1px -1px 30px 0px rgba(255, 2, 2, 1) !important;
 }
+
 .kb-box-shadow-blue {
     -webkit-box-shadow: 1px 1px 30px 0px rgba(0, 0, 255, 1) !important;
     -moz-box-shadow:    1px 1px 30px 0px rgba(0, 0, 255, 1) !important;
