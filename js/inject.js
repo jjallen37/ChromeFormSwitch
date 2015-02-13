@@ -34,13 +34,16 @@ var Inject = (function (){
 		'select:visible'
 	];
 
+	var EXIT_EVENT = "spotlight_exit_event";
+
 	// variables ----------------------------------------------------------------
 	var _this		= {},
 		_views		= {},
 		_state		= STATES.MENU,
 		_container	= null,
 		_overlay	= null,
-		_node		= null;
+		_node		= null,
+		_z_index	= 1000;
 	
 	// initialize ---------------------------------------------------------------
 	_this.init = function (){
@@ -52,7 +55,12 @@ var Inject = (function (){
 		// Create NavTree
 		_node = new NavTree(null,document.body); // Root node
 		_node = NavTree.buildTree(_node,_node.elt);
-		_node.decorateNode(true);
+		$(_node.elt).spotlight({z_index:_z_index});
+		_z_index+=2;
+		var selected1 = _node.getSelectedNode();
+		$(selected1.elt).spotlight({z_index:_z_index});
+		_z_index+=2;
+		//_node.decorateNode(true);
 
 		// create the main container
 		_container = $('<div />', {id:ID.CONTAINER});
@@ -165,29 +173,50 @@ var Inject = (function (){
 	};
 	
 	function message_onScanClicked (data){
-		_node = _node.scanNode();
-		$(document.body).scrollTop($(_node.getSelectedNode().elt).offset().top - 100);
+		var selected = _node.getSelectedNode();
+		$(selected.elt).trigger(EXIT_EVENT);
+		//_z_index-=2;
+		// End of non-circular row, select parent
+		if (_node.children.length >= (_node.activeIndex + 1) &&
+			_node.parent != null){
+			$(_node.elt).trigger(EXIT_EVENT);
+			_z_index-=2;
+			_node = _node.parent;
+			_node.activeIndex = 0;
+		} else {
+			_node.activeIndex =  (_node.activeIndex + 1) % _node.children.length;
+		}
+		selected = _node.getSelectedNode();
+		$(selected.elt).spotlight({z_index:_z_index});
+		_z_index+=2;
+		$(document.body).scrollTop($(_node.elt).offset().top - 100);
 	};
 		
 	function message_onSelectClicked (data){
-		//$(_node.elt).trigger('spotlight_exit_event');
-		var selectedNode = _node.selectNode();
-		$(selectedNode.elt).trigger('spotlight_exit_event');
-		if (selectedNode.isLeaf){
-			var aElt = selectedNode.elt;
-			if ( $(aElt).is('input[type=text]')){
+		var activeNode = _node.getSelectedNode();
+		if (activeNode.children.length == 1){
+            var $aElt;
+			if( activeNode.isLeaf) {
+				$aElt = $(activeNode.elt);
+			} else {
+				$aElt = $(activeNode.children[0].elt);
+			}
+
+			//$aElt.spotlight();
+			if ( $aElt.is('input[type=text]')){
 				_state = STATES.KB;
 
-				//getView('keyboard', $(document.body)).iframe.show();
 				getView('keyboard', _container).iframe.show();
 				getView('menu', _container).iframe.hide();
 			} else {
-				$(aElt)[0].click();
+				$aElt[0].click();
 			}
-			//}
 		} else {
-			_node = selectedNode;
-			$(document.body).scrollTop($(_node.getSelectedNode().elt).offset().top - 100);
+			_node = activeNode;
+			_node.activeIndex = 0;
+			$(_node.elt).spotlight({z_index:_z_index});
+			_z_index+=2;
+			$(document.body).scrollTop($(_node.elt).offset().top - 100);
 		}
 	};
 
@@ -207,35 +236,6 @@ var Inject = (function (){
 		getView('keyboard', _container).iframe.hide();
 		getView('menu', _container).iframe.show();
 	};
-
-	//function buildGraph(node){
-	//	var elt = $(node.elt);
-	//	// Base case for graph
-	//	if (elt.is(LEAF_SELECTORS.join(','))){
-	//		node.isLeaf = true;
-	//		return;
-	//	}
-    //
-	//	// All children of current node with leaf descendants
-	//	var branches = elt.children().has(LEAF_SELECTORS.join(','));
-	//	LEAF_SELECTORS.forEach(function(selector,index,array){
-	//		branches = branches.add('> '+selector, elt); // Add leafs from the current directory
-	//	});
-    //
-	//	// Propagate link nodes
-	//	if (branches.length == 1){
-	//		node.elt = branches.first()[0];
-	//		buildGraph(node);
-	//		return;
-	//	}
-    //
-	//	// Create next layer of nodes
-	//	branches.each(function(i, elt){
-	//		var childNode = new NavTree(node, elt);
-	//		buildGraph(childNode);
-	//		node.children.push(childNode);
-	//	});
-	//}
 
 	return _this;
 }());

@@ -95,7 +95,7 @@
 			};
 			// Register exit event handling to the displayed element, as opposed to the spotlight div.
 			$(this).on(settings.exitEvent, handle_exit_event);
-			//spotlight.on('click', handle_exit_event);
+			spotlight.on('click', handle_exit_event);
 		}
 
 		// Returns the jQuery object to allow for chainability.  

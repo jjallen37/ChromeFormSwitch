@@ -19,6 +19,7 @@ var LEAF_SELECTORS = [
     'select:visible'
 ];
 
+var EXIT_EVENT = "spotlight_exit_event";
 var settings = {
     HIGHLIGHT_CLASS : 'kb-box-shadow-blue',
     HIGHLIGHT_CLASS2 : 'kb-box-shadow-red',
@@ -30,7 +31,7 @@ var NavTree = function(parent, elt, depth){
     this.elt = elt; // DOM Elt
     this.children = []; // Array of NavTree
     this.isLeaf = false;
-    this.selectedIndex = 0;
+    this.activeIndex = 0;
     this.lives = 0;
     this.depth = (this.parent === null) ? 0 : this.parent.depth++;
 };
@@ -45,7 +46,7 @@ NavTree.prototype.getSelectedNode = function(){
     if (this.children.length == 0){
         return null;
     }
-    return this.children[this.selectedIndex];
+    return this.children[this.activeIndex];
 };
 
 /*
@@ -61,29 +62,39 @@ NavTree.prototype.selectNode = function(){
     // Selected node to become new node
     selectedNode.resetLives();
     selectedNode.getSelectedNode().lives--;
-    this.decorateNode(false);
+    //this.decorateNode(false);
     selectedNode.decorateNode(true);
     return selectedNode;
 };
 
 NavTree.prototype.scanNode = function(){
-    this.decorateNode(false);
     this.selectedIndex = (this.selectedIndex + 1) % this.children.length;
     var nextNode = this.getSelectedNode();
 
     // Root node
     if (this.parent == null){
         this.decorateNode(true); // Full cycle, no lives
-    } else if (nextNode.lives == 0){ // Reached end of row
-        this.parent.resetLives();
-        this.parent.getSelectedNode().lives--;
-        this.parent.decorateNode(this.parent);
+    } else if (this.selectedIndex == 0){ // Reached end of row
+        this.parent.selectedIndex = 0;
         return this.parent; // Return focus to parent
     } else {
         nextNode.lives--;
         this.decorateNode(true);
     }
     return this;
+};
+
+NavTree.prototype.setActive = function(index){
+    // Remove old active
+    var active = this.children[this.activeIndex];
+    $(active.elt).trigger(EXIT_EVENT);
+    // Update new active
+    if (index > 0 && index < this.children.length){
+        this.activeIndex = index;
+        active = this.children[this.activeIndex];
+        $(active.elt).spotlight();
+
+    }
 };
 
 /*
